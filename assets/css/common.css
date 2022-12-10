@@ -1,0 +1,52 @@
+.mx-40 {
+    margin: auto 40px;
+}
+
+.mr-40 {
+    margin-right: 40px;
+}
+
+.ml-40 {
+    margin-left: 40px;
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+.flexible-col {
+    display:flex;
+    flex-direction: column;
+    margin: 20px 50px;
+}
+
+.wd-50 {
+    width: 100px;
+}
+
+.max-h544 {
+    max-height: 544px;
+}
+
+.max-h500 {
+    max-height: 500px;
+}
+
+.flexible-2-rows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt-clr-black {
+    color: black;
+}
+
+.txt-clr-white {
+    color: white;
+}
+
+.txt-ft-size{
+    font-size: 19px;
+}

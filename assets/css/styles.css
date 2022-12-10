@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import "common.css";
 
 /* Styles that applies to mobile */
 @media screen and (max-width: 400px) {
@@ -8,7 +9,7 @@
 
     main .picture {  
         display: block;
-        width: 80%; 
+        width: 100%; 
         margin: 0 auto;
     }
     
@@ -30,6 +31,10 @@
     .hamburger:active {
         scale: 90%;
     }
+
+    .main-container {
+        margin-right: 250px;
+    }
 }
 
 /* Styles that applies to desktop */
@@ -38,11 +43,12 @@
         display: none;
     }
 
-    main .picture {  
-        display: block;
-        width: 50%; 
+    /* main .picture {  
+        width: 100%; 
         margin: 0 auto;
-    }
+    } */
+
+
 
     .hamburger {
         display: none;
@@ -53,6 +59,7 @@
 html,body {
     margin: 0;
     padding: 0;
+    min-height: 100%;
 }
 
 /* HEADER */
@@ -131,15 +138,41 @@ header .dropdown ul {
 
 /* BODY */
 body{
+    color: white;
     font-family: 'Source Sans Pro', sans-serif;
     background-color: rgba(232, 226, 235, 0.87);
     display: flex;
     flex-direction: column;
+    background-image: url("../images/pawel-czerwinski-uYWQNAvdWpc-unsplash.jpg");
+    /*<!-- Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/collections/itPKnaVsuzY/abstract-background?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->*/
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 21px;
+}
+
+.bg-img {
+    position: absolute;
+    max-width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.body-container {
+    z-index: 1;
+}
+
+.picture {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 100%;
+    max-width: 700px;
 }
 
 main .heading {
     color: rgb(252, 252, 252);   
-    background-color: rgb(186, 177, 219);
+    background-color: rgba(186, 177, 219,0.8);
     padding: 10px;
     margin: 0;
     text-align: center;
@@ -150,10 +183,6 @@ main .heading {
     margin: 0 50px;   
 }
 
-
-footer {
-    text-align: center;
-}
 
 .flexible{
     display: flex;
@@ -172,26 +201,8 @@ main ul {
     padding: 0;
 }
 
-.mx-40 {
-    margin: auto 40px;
-}
-
-.mr-40 {
-    margin-right: 40px;
-}
-
-.ml-40 {
-    margin-left: 40px;
-}
-
-.justify-text {
-    text-align: justify;
-}
-
-.flexible-col {
-    display:flex;
-    flex-direction: column;
-    margin: 20px 50px;
+.video {
+    width: 100%;
 }
 
 form label {
@@ -202,10 +213,6 @@ form input {
     height: 25px;
 }
 
-.wd-50 {
-    width: 100px;
-}
-
 .form-btn {
     background-color: rgb(186, 177, 219);
     padding: 10px;
@@ -214,6 +221,7 @@ form input {
     box-shadow: 0px 0px 10px rgb(178, 171, 204);
     color: white;
     font-weight: bold;
+    font-size: 19px;
 }
 
 .form-btn:hover{
@@ -233,11 +241,13 @@ form {
 }
 
 footer {
-    display: flex; 
-    justify-content: space-evenly;
-    align-items: center;
+    bottom: 0%;
+    position: relative;
+    width: 100%; 
+    text-align: center;
 }
 
 footer img {
     max-width: 35px;
 }
+
